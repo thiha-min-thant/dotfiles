@@ -1,0 +1,5 @@
+brew "chezmoi"
+brew "fish"
+brew "starship"
+cask "ghostty"
+vscode "anysphere.remote-ssh"

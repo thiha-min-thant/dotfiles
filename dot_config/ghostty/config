@@ -1,0 +1,10 @@
+theme = Tokyo Night
+font-family = JetBrainsMono Nerd Font
+font-size = 15
+
+window-padding-x = 10
+window-padding-y = 10
+
+background-opacity = 0.95
+
+shell-integration = fish
