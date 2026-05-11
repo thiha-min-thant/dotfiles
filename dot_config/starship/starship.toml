@@ -1,0 +1,90 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Tokyo Night–ish palette, two lines, Nerd Font–friendly. Runtimes only show when detected.
+format = """
+$directory\
+$git_branch\
+$git_status\
+$git_state\
+$kubernetes\
+$docker_context\
+$container\
+$nodejs\
+$python\
+$cmd_duration\
+$jobs\
+$sudo\
+$line_break\
+$character"""
+
+[character]
+success_symbol = '[❯](bold fg:#9ece6a)'
+error_symbol = '[❯](bold fg:#f7768e)'
+vimcmd_symbol = '[❮](bold fg:#bb9af7)'
+
+[directory]
+truncation_length = 4
+truncate_to_repo = true
+read_only = ' '
+style = 'bold fg:#7aa2f7'
+read_only_style = 'bold fg:#f7768e'
+repo_root_style = 'bold fg:#bb9af7'
+format = '[$path]($style)[$read_only]($read_only_style) '
+
+[git_branch]
+symbol = ' '
+style = 'fg:#bb9af7'
+format = '[$symbol$branch ]($style)'
+
+[git_status]
+style = 'fg:#e0af68'
+
+[git_state]
+style = 'fg:#7dcfff'
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+
+[kubernetes]
+disabled = false
+symbol = '⎈ '
+style = 'fg:#7dcfff'
+format = '[$symbol$context( \($namespace\))]($style) '
+
+[docker_context]
+symbol = '🐳 '
+style = 'fg:#7aa2f7'
+format = '[$symbol$context]($style) '
+only_with_files = true
+
+[container]
+symbol = '⬢ '
+style = 'fg:#f7768e'
+format = '[$symbol \[$name\]]($style) '
+
+[nodejs]
+symbol = ' '
+style = 'fg:#9ece6a'
+format = '[$symbol($version )]($style)'
+
+[python]
+symbol = ' '
+style = 'fg:#e0af68'
+format = '[$symbol($version )]($style)'
+
+[cmd_duration]
+min_time = 2_000
+show_milliseconds = false
+style = 'fg:#565f89'
+format = 'took [$duration]($style) '
+
+[jobs]
+symbol = ' '
+style = 'fg:#bb9af7'
+threshold = 1
+format = '[$symbol$number]($style) '
+
+[sudo]
+disabled = false
+symbol = '⚡ '
+style = 'fg:#f7768e'
+format = '[$symbol]($style) '
+

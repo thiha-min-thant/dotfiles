@@ -1,10 +1,18 @@
-theme = Tokyo Night
-font-family = JetBrainsMono Nerd Font
+# Appearance
+theme = TokyoNight
+font-family = FiraCode Nerd Font
 font-size = 15
-
-window-padding-x = 10
-window-padding-y = 10
-
 background-opacity = 0.95
 
+# Window — balance extra slack when cell grid doesn’t divide evenly into the viewport
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+# Pointer hides while typing (shown again on mouse move)
+mouse-hide-while-typing = true
+
+# Fish injection + cursor/title at prompt, sudo terminfo, SSH helpers, ghostty on PATH (macOS-friendly)
 shell-integration = fish
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo,path
+
