@@ -19,6 +19,7 @@ if status is-interactive
     set -g fish_greeting
     set -g fish_history_size 50000
 
+    abbr -a -- c 'clear'
     abbr -a -- gs 'git status'
     abbr -a -- gd 'git diff'
     abbr -a -- gp 'git pull'
@@ -28,7 +29,10 @@ if status is-interactive
     abbr -a -- ld lazydocker
     abbr -a -- dc 'docker compose'
     abbr -a -- v nvim
+    abbr -a -- csk 'colima start --cpu 4 --memory 8 --disk 100 --runtime containerd --kubernetes'
+    abbr -a -- cs 'colima start --cpu 4 --memory 8 --disk 100'
 
     set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
     starship init fish | source
 end
+
